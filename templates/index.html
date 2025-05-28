@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Office Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Convert PDF to Office Document</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="pdf_file">Upload PDF File:</label>
+    <input type="file" id="pdf_file" name="file" accept=".pdf" required>
+    
+    <label for="format">Select Format:</label>
+    <select id="format" name="format" required>
+        <option value="docx">Word (.docx)</option>
+        <option value="xlsx">Excel (.xlsx)</option>
+        <option value="pptx">PowerPoint (.pptx)</option>
+    </select>
+    
+    <button type="submit">Convert</button>
+</form>
+    </div>
+</body>
+</html>
